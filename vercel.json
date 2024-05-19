@@ -1,20 +1,16 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/index.php",
-      "use": "@vercel/php"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "public/$1"
-    }
-  ],
-  "build": {
-    "env": {
-      "COMPOSER_ALLOW_SUPERUSER": "1"
-    }
-  }
+    "version": 2,
+    "builds": [
+        {
+            "src": "api/index.php",
+            "use": "@vercel/php"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "public/$1"
+        }
+    ],
+    "buildCommand": "./build.sh"
 }
