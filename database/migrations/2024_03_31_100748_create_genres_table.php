@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name', 255);
             $table->enum('style', ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

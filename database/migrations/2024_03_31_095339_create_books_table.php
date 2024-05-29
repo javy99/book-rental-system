@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('isbn', 13)->unique();
             $table->integer('in_stock');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
